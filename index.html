@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PackComply — Free Packaging Export Checker</title>
+<meta name="description" content="Free preliminary packaging compliance checker for exporters. Check your product, destination market and packaging before export.">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f6f8fb;color:#14233b;font-family:Inter,Arial,sans-serif}header{height:66px;background:#fff;border-bottom:1px solid #e4e9f0;display:flex;align-items:center;padding:0 6%;gap:28px}.logo{font-size:22px;font-weight:800}.logo span{color:#0875df}.nav{margin-left:auto;font-size:13px;color:#5d6b7e}.wrap{max-width:1120px;margin:auto;padding:42px 20px}.hero{text-align:center;max-width:820px;margin:0 auto 30px}.tag{display:inline-block;background:#eaf3ff;color:#0875df;padding:7px 12px;border-radius:20px;font-size:11px;font-weight:800;letter-spacing:.5px}.hero h1{font-size:44px;line-height:1.08;margin:16px 0 13px}.hero p{font-size:16px;line-height:1.6;color:#667085}.checker{background:#fff;border:1px solid #dfe6ef;border-radius:18px;padding:28px;box-shadow:0 14px 40px #193b650d}.steps{display:flex;gap:8px;margin-bottom:25px}.step{font-size:11px;padding:7px 10px;border-radius:15px;background:#f0f3f7;color:#6b7787}.step.active{background:#eaf3ff;color:#0875df;font-weight:700}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field label{display:block;font-size:12px;font-weight:700;margin-bottom:7px}.field select,.field input{width:100%;padding:13px;border:1px solid #ccd6e2;border-radius:9px;background:white}.wide{grid-column:1/-1}.photo{border:2px dashed #b5cce8;border-radius:12px;padding:27px;text-align:center;background:#f9fbfe}.photo input{display:none}.photo label{cursor:pointer;color:#0875df;font-weight:700}.preview img{max-width:100%;max-height:330px;margin-top:15px;border-radius:9px}.actions{margin-top:20px;display:flex;gap:10px;align-items:center}.btn{border:0;border-radius:9px;padding:13px 18px;font-weight:700;cursor:pointer}.primary{background:#0875df;color:white}.secondary{background:#edf5ff;color:#0868c9}.result{display:none;margin-top:24px}.resulthead{display:flex;justify-content:space-between;align-items:flex-start;gap:15px}.status{font-size:11px;font-weight:800;padding:7px 10px;border-radius:15px;background:#fff2d5;color:#8b6200}.cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:18px}.card{background:#fff;border:1px solid #dfe6ef;border-radius:14px;padding:18px}.card h3{font-size:15px;margin:0 0 12px}.item{padding:11px 0;border-top:1px solid #edf1f5;font-size:12px;line-height:1.5}.item:first-child{border-top:0}.ok{color:#147544;font-weight:700}.warn{color:#966400;font-weight:700}.muted{color:#667085;font-size:12px;line-height:1.5}.source{font-size:11px;margin-top:8px}.source a{color:#0875df}.footer{padding:30px 6%;border-top:1px solid #e4e9f0;background:#fff;color:#667085;font-size:11px;line-height:1.6;margin-top:45px}.disclaimer{background:#f5f7fa;border-radius:10px;padding:12px;margin-top:15px}@media(max-width:750px){.grid,.cards{grid-template-columns:1fr}.wide{grid-column:auto}.hero h1{font-size:34px}.resulthead{flex-direction:column}}
+</style></head>
+<body>
+<header><div class="logo"><span>Pack</span>Comply</div><div>Free Packaging Export Checker</div><div class="nav">Preliminary check · No account required</div></header>
+<div class="wrap">
+<section class="hero"><span class="tag">FREE BETA</span><h1>Check your packaging before you export.</h1><p>Tell us what you are exporting, where it is going, and what packaging you use. Get a preliminary list of regulatory areas, potential issues and evidence to prepare.</p></section>
+<section class="checker">
+<div class="disclaimer"><b>Coverage:</b> Rules are currently verified for selected EU/Germany starter scenarios. Other markets are selectable for workflow testing, but the tool will not claim full regulatory coverage until their official rules are loaded.</div>
+<div class="steps"><span class="step active">1 Product</span><span class="step active">2 Market</span><span class="step active">3 Packaging</span><span class="step active">4 Check</span></div>
+<div class="grid">
+<div class="field"><label>Product category</label><select id="product"><option value="food">Food — General</option><option value="cinnamon">Cinnamon</option><option value="tea">Tea</option><option value="coconut">Coconut products</option><option value="coffee">Coffee</option><option value="spices">Spices — General</option><option value="mushrooms">Mushrooms / mushroom powder</option><option value="beverage">Beverage</option><option value="cosmetic">Cosmetic</option><option value="chemical">Chemical</option><option value="other">Other</option></select></div>
+<div class="field"><label>Destination market</label><select id="country"><option value="Germany">Germany</option><option value="France">France</option><option value="Netherlands">Netherlands</option><option value="United Kingdom">United Kingdom</option><option value="United Arab Emirates">United Arab Emirates</option><option value="Saudi Arabia">Saudi Arabia</option><option value="Japan">Japan</option><option value="China">China</option><option value="Australia">Australia</option><option value="Canada">Canada</option><option value="India">India</option></select></div>
+<div class="field"><label>Packaging material</label><select id="material"><option value="plastic">Plastic</option><option value="paper">Paper / Cardboard</option><option value="glass">Glass</option><option value="metal">Metal</option><option value="composite">Composite / Multilayer</option></select></div>
+<div class="field"><label>Does the packaging contact the product?</label><select id="contact"><option value="yes">Yes</option><option value="no">No</option><option value="unknown">Not sure</option></select></div>
+<div class="field"><label>Will it reach consumers/end users?</label><select id="b2c"><option value="yes">Yes</option><option value="no">No</option><option value="unknown">Not sure</option></select></div>
+<div class="field"><label>If Germany: selling directly to end users from abroad?</label><select id="foreign_direct"><option value="unknown">Not sure / Not applicable</option><option value="yes">Yes</option><option value="no">No</option></select></div>
+<div class="field"><label>Packaging mass</label><select id="mass"><option value="known">Known</option><option value="unknown">Unknown</option></select></div>
+<div class="field wide"><label>Packaging photo (optional, recommended)</label><div class="photo"><input id="photo" type="file" accept="image/*"><label for="photo">Upload front or back packaging photo<br><small>JPG / PNG / WEBP · max 8 MB</small></label><div class="preview" id="preview"></div></div></div>
+</div>
+<div class="actions"><button class="btn primary" id="check">Run Free Check</button><span class="muted">Free beta · preliminary information only</span></div>
+</section>
+<section class="result" id="result"><div class="resulthead"><div><small class="muted">PackComply preliminary assessment</small><h2 id="rtitle">Action required</h2><p id="summary" class="muted"></p></div><span class="status">PRELIMINARY REVIEW</span></div>
+<div class="cards"><div class="card"><h3>Regulatory areas</h3><div id="reg"></div></div><div class="card"><h3>Potential issues</h3><div id="issues"></div></div><div class="card"><h3>Evidence to prepare</h3><div id="evidence"></div></div></div>
+<div class="card" style="margin-top:14px"><h3>Official sources</h3><div id="sources"></div><div class="disclaimer">This free tool provides a preliminary compliance check. It is not legal advice, certification or a binding determination of compliance. Exact applicability depends on the product, packaging, supply-chain role and current law.</div></div>
+</section></div>
+<footer><b>PackComply</b> — Free packaging export checker.<br>Built to help exporters identify what they need to verify before shipment.</footer>
+<script>
+const $=id=>document.getElementById(id);
+$("photo").onchange=e=>{let f=e.target.files[0];if(f)$("preview").innerHTML="<img src='"+URL.createObjectURL(f)+"'>"};
+$("check").onclick=async()=>{
+ const x={product:$("product").value,country:$("country").value,material:$("material").value,food_contact:$("contact").value,b2c:$("b2c").value,mass:$("mass").value,foreign_direct:$("foreign_direct").value};
+ $("check").disabled=true;$("check").textContent="Checking…";
+ try{let r=await fetch("/api/check",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(x)});let d=await r.json();
+ let m=d.matched||[], ev=d.evidence||[];
+ $("rtitle").textContent=d.status;
+ $("summary").textContent=`${$("product").selectedOptions[0].text} → ${x.country} → ${$("material").selectedOptions[0].text}`;
+ $("reg").innerHTML=m.length?m.map(r=>`<div class="item"><span class="ok">Applicable / review</span><br><b>${esc(r.title)}</b><p class="muted">${esc(r.summary)}</p></div>`).join(""):"<p class='muted'>No specific rule is currently seeded for this exact profile. General screening may still be relevant; verify the official sources.</p>";
+ $("evidence").innerHTML=ev.length?ev.map(e=>`<div class="item">${esc(e)}</div>`).join(""):"<p class='muted'>No additional evidence listed.</p>";
+ let issues=d.issues||[];if(x.food_contact==="unknown")issues.push("Food-contact status is unknown.");if(x.b2c==="unknown")issues.push("Consumer/end-user sales status is unknown.");
+ $("issues").innerHTML=issues.length?issues.map(e=>`<div class="item"><span class="warn">Check required</span><br>${esc(e)}</div>`).join(""):"<div class='item'><span class='ok'>No obvious issue from the information provided.</span></div>";
+ $("sources").innerHTML=m.map(r=>`<div class="item"><b>${esc(r.title)}</b><div class="source"><a target="_blank" rel="noopener" href="${r.source.url}">${esc(r.source.name)}</a><br><small>Verified ${esc(r.verified)}</small></div></div>`).join("");
+ $("result").style.display="block";$("result").scrollIntoView({behavior:"smooth"});
+ }catch(e){alert("Could not run the check: "+e.message)}finally{$("check").disabled=false;$("check").textContent="Run Free Check"}
+};
+function esc(s){return String(s??"").replace(/[&<>'"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;","\"":"&quot;"}[c]))}
+</script></body></html>

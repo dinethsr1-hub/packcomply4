@@ -1,0 +1,428 @@
+{
+  "metadata": {
+    "product": "PackComply",
+    "version": "0.6",
+    "purpose": "Prototype regulatory intelligence database",
+    "disclaimer": "Preliminary information only; not legal advice, certification, or a binding compliance determination."
+  },
+  "countries": {
+    "Germany": {
+      "market": "EU",
+      "regulator_sources": [
+        {
+          "name": "ZSVR / LUCID",
+          "url": "https://www.verpackungsregister.org/en/registration/find-out-about-registrations"
+        },
+        {
+          "name": "ZSVR \u2014 system participation & reporting",
+          "url": "https://www.verpackungsregister.org/en/information-system-participation-and-data-reporting"
+        }
+      ]
+    },
+    "France": {
+      "market": "EU",
+      "regulator_sources": []
+    },
+    "Netherlands": {
+      "market": "EU",
+      "regulator_sources": []
+    },
+    "United Kingdom": {
+      "market": "UK",
+      "regulator_sources": []
+    }
+  },
+  "rules": [
+    {
+      "id": "EU-PPWR",
+      "jurisdiction": "EU",
+      "triggers": {
+        "product_groups": [
+          "food"
+        ],
+        "packaging_materials": [
+          "plastic",
+          "paper",
+          "glass",
+          "metal",
+          "composite"
+        ]
+      },
+      "title": "Packaging and Packaging Waste Regulation (EU) 2025/40",
+      "type": "packaging",
+      "status": "verified_source",
+      "effective": "2026-08-12",
+      "summary": "The PPWR establishes EU rules covering packaging and packaging waste, including requirements that can relate to packaging minimisation, recyclability, recycled content and substances.",
+      "evidence": [
+        "packaging material specification",
+        "packaging mass",
+        "technical documentation"
+      ],
+      "source": {
+        "name": "EUR-Lex \u2014 Regulation (EU) 2025/40",
+        "url": "https://eur-lex.europa.eu/eli/reg/2025/40/oj/eng"
+      },
+      "priority": "normal",
+      "review_frequency": "monitor official source",
+      "last_verified": "2026-10-17"
+    },
+    {
+      "id": "EU-FCM-1935",
+      "jurisdiction": "EU",
+      "triggers": {
+        "food_contact": true
+      },
+      "title": "Food Contact Materials \u2014 Regulation (EC) No 1935/2004",
+      "type": "food_contact",
+      "status": "verified_source",
+      "effective": "currently_applicable",
+      "summary": "Food-contact materials are subject to the EU general food-contact framework and must meet applicable safety requirements.",
+      "evidence": [
+        "material specification",
+        "supplier declaration/supporting documentation"
+      ],
+      "source": {
+        "name": "European Commission \u2014 Food Contact Materials",
+        "url": "https://food.ec.europa.eu/food-safety/chemical-safety/food-contact-materials_en"
+      },
+      "priority": "normal",
+      "review_frequency": "monitor official source",
+      "last_verified": "2026-10-17"
+    },
+    {
+      "id": "EU-FCM-10-2011",
+      "jurisdiction": "EU",
+      "triggers": {
+        "food_contact": true,
+        "packaging_materials": [
+          "plastic",
+          "composite"
+        ]
+      },
+      "title": "Plastic Food Contact Materials \u2014 Regulation (EU) No 10/2011",
+      "type": "food_contact_plastic",
+      "status": "verified_source",
+      "effective": "currently_applicable",
+      "summary": "Specific EU requirements apply to plastic materials and articles intended to come into contact with food, including compositional and migration-related provisions.",
+      "evidence": [
+        "exact polymer/material structure",
+        "declaration of compliance",
+        "supporting migration/testing documentation where applicable"
+      ],
+      "source": {
+        "name": "EUR-Lex \u2014 Regulation (EU) No 10/2011",
+        "url": "https://eur-lex.europa.eu/eli/reg/2011/10/oj/eng"
+      },
+      "priority": "normal",
+      "review_frequency": "monitor official source",
+      "last_verified": "2026-10-17"
+    },
+    {
+      "id": "DE-LUCID",
+      "jurisdiction": "Germany",
+      "triggers": {
+        "packaging_subject_to_system_participation": true
+      },
+      "title": "Germany \u2014 LUCID Packaging Register registration",
+      "type": "epr_registration",
+      "status": "verified_source",
+      "effective": "before applicable packaging is first placed on German market",
+      "summary": "Producers within scope must register with the LUCID Packaging Register. Registration is free and registration information must be kept current.",
+      "evidence": [
+        "LUCID registration number",
+        "brand names and packaging information"
+      ],
+      "source": {
+        "name": "ZSVR \u2014 Registering with LUCID",
+        "url": "https://www.verpackungsregister.org/en/registration/find-out-about-registrations"
+      },
+      "priority": "normal",
+      "review_frequency": "monitor official source",
+      "last_verified": "2026-10-17"
+    },
+    {
+      "id": "DE-SYSTEM",
+      "jurisdiction": "Germany",
+      "triggers": {
+        "packaging_subject_to_system_participation": true
+      },
+      "title": "Germany \u2014 System participation / EPR financing",
+      "type": "epr_system",
+      "status": "verified_source",
+      "effective": "ongoing",
+      "summary": "Packaging subject to system participation requires participation in a system to finance recycling, subject to German classification rules.",
+      "evidence": [
+        "system participation agreement",
+        "packaging volumes by material"
+      ],
+      "source": {
+        "name": "ZSVR \u2014 System participation",
+        "url": "https://www.verpackungsregister.org/en/system-participation-data-reporting/system-participation"
+      },
+      "priority": "normal",
+      "review_frequency": "monitor official source",
+      "last_verified": "2026-10-17"
+    },
+    {
+      "id": "DE-REPORT",
+      "jurisdiction": "Germany",
+      "triggers": {
+        "packaging_subject_to_system_participation": true
+      },
+      "title": "Germany \u2014 LUCID packaging volume data reporting",
+      "type": "epr_reporting",
+      "status": "verified_source",
+      "effective": "ongoing",
+      "summary": "Packaging volumes reported to the system operator must also be reported to LUCID as required. The reporting schedule follows the system participation arrangement and statutory rules.",
+      "evidence": [
+        "packaging volume report",
+        "material type and mass",
+        "system operator details"
+      ],
+      "source": {
+        "name": "ZSVR \u2014 Data reporting",
+        "url": "https://www.verpackungsregister.org/en/system-participation-data-reporting/data-reporting"
+      },
+      "priority": "normal",
+      "review_frequency": "monitor official source",
+      "last_verified": "2026-10-17"
+    },
+    {
+      "id": "DE-AR",
+      "jurisdiction": "Germany",
+      "triggers": {
+        "cross_border_b2c": true
+      },
+      "title": "Germany \u2014 Authorised representative for certain foreign producers",
+      "type": "epr_authorised_rep",
+      "status": "verified_source",
+      "effective": "currently applicable",
+      "summary": "A company based abroad that sells empty packaging or packaged products directly to end users in Germany without a German branch may need to appoint an authorised representative for the relevant extended producer responsibility obligations.",
+      "evidence": [
+        "German sales model",
+        "proof of establishment/branch status",
+        "authorised representative details"
+      ],
+      "source": {
+        "name": "ZSVR \u2014 LUCID registration guidance",
+        "url": "https://www.verpackungsregister.org/en/registration/find-out-about-registrations"
+      },
+      "priority": "normal",
+      "review_frequency": "monitor official source",
+      "last_verified": "2026-10-17"
+    },
+    {
+      "id": "DE-DOC",
+      "jurisdiction": "Germany",
+      "triggers": {
+        "ppwr_producer_role": true
+      },
+      "title": "Germany \u2014 Manufacturer/producer role and technical documentation",
+      "type": "technical_documentation",
+      "status": "verified_source",
+      "effective": "2026-08-12",
+      "summary": "The PPWR reorganises packaging responsibilities. The responsible role may affect technical documentation and declaration-of-conformity obligations; the responsible manufacturer and producer are not necessarily the same company.",
+      "evidence": [
+        "supply-chain role",
+        "packaging specification",
+        "technical documentation/declaration where applicable"
+      ],
+      "source": {
+        "name": "ZSVR \u2014 System participation and data reporting",
+        "url": "https://www.verpackungsregister.org/en/system-participation-data-reporting/overview"
+      },
+      "priority": "normal",
+      "review_frequency": "monitor official source",
+      "last_verified": "2026-10-17"
+    },
+    {
+      "id": "DE-DoC",
+      "jurisdiction": "Germany",
+      "triggers": {
+        "high_packaging_volume": true
+      },
+      "title": "Germany \u2014 Declaration of completeness for high packaging volumes",
+      "type": "epr_declaration",
+      "status": "verified_source",
+      "effective": "annual",
+      "summary": "Companies with packaging volumes above the applicable statutory thresholds may have to submit an audited declaration of completeness by the statutory deadline.",
+      "evidence": [
+        "annual packaging volumes",
+        "auditor confirmation where required"
+      ],
+      "source": {
+        "name": "ZSVR \u2014 Declaration of completeness",
+        "url": "https://www.verpackungsregister.org/en/system-participation-data-reporting/declaration-of-completeness"
+      },
+      "priority": "normal",
+      "review_frequency": "monitor official source",
+      "last_verified": "2026-10-17"
+    },
+    {
+      "id": "DE-SYSTEM-DECISION",
+      "jurisdiction": "Germany",
+      "triggers": {
+        "country": "Germany",
+        "packaging_subject_to_system_participation": true
+      },
+      "title": "Germany \u2014 System participation decision",
+      "type": "decision",
+      "priority": "high",
+      "review_frequency": "monitor ZSVR catalogue",
+      "last_verified": "2026-10-17",
+      "status": "verified_source",
+      "effective": "currently applicable",
+      "summary": "If the packaging is subject to system participation, the producer must conclude a system participation agreement with a system operator. The ZSVR provides a system participation requirement catalogue for classification.",
+      "evidence": [
+        "packaging classification",
+        "material type and mass",
+        "sales/distribution channel"
+      ],
+      "source": {
+        "name": "ZSVR \u2014 System participation requirement",
+        "url": "https://www.verpackungsregister.org/en/system-participation-data-reporting/system-participation"
+      }
+    },
+    {
+      "id": "DE-LUCID-DATA",
+      "jurisdiction": "Germany",
+      "triggers": {
+        "country": "Germany",
+        "packaging_subject_to_system_participation": true
+      },
+      "title": "Germany \u2014 LUCID data reporting",
+      "type": "reporting",
+      "priority": "high",
+      "review_frequency": "monitor ZSVR guidance",
+      "last_verified": "2026-10-17",
+      "status": "verified_source",
+      "effective": "currently applicable",
+      "summary": "Packaging volumes subject to system participation must be reported to the system operator and LUCID. Reports use material types and mass in kilograms; reporting timing depends on the system agreement, with statutory year-end rules.",
+      "evidence": [
+        "system operator",
+        "reporting period",
+        "material type",
+        "packaging mass in kg"
+      ],
+      "source": {
+        "name": "ZSVR \u2014 Data reporting",
+        "url": "https://www.verpackungsregister.org/en/system-participation-data-reporting/data-reporting"
+      }
+    },
+    {
+      "id": "DE-SMALL-VOLUME",
+      "jurisdiction": "Germany",
+      "triggers": {
+        "country": "Germany",
+        "small_volume_under_10t": true
+      },
+      "title": "Germany \u2014 Simplified LUCID reporting for small volumes",
+      "type": "reporting_exception",
+      "priority": "normal",
+      "review_frequency": "monitor ZSVR guidance",
+      "last_verified": "2026-10-17",
+      "status": "verified_source",
+      "effective": "currently applicable",
+      "summary": "For producers that made less than 10 tonnes of packaging subject to system participation available on the German market for the first time in the previous calendar year, ZSVR describes a simplified year-end reporting option.",
+      "evidence": [
+        "prior-year packaging volume",
+        "system participation records"
+      ],
+      "source": {
+        "name": "ZSVR \u2014 Data reporting FAQ",
+        "url": "https://www.verpackungsregister.org/en/help/data-reporting-in-lucid"
+      }
+    },
+    {
+      "id": "DE-DOC-15MAY",
+      "jurisdiction": "Germany",
+      "triggers": {
+        "country": "Germany",
+        "high_packaging_volume": true
+      },
+      "title": "Germany \u2014 Audited declaration of completeness",
+      "type": "annual_declaration",
+      "priority": "high",
+      "review_frequency": "monitor ZSVR guidance",
+      "last_verified": "2026-10-17",
+      "status": "verified_source",
+      "effective": "annual",
+      "summary": "Companies with high packaging volumes have to submit an audited declaration of completeness for the previous year by the statutory deadline; ZSVR currently states 15 May.",
+      "evidence": [
+        "annual packaging volumes",
+        "audit by registered auditor"
+      ],
+      "source": {
+        "name": "ZSVR \u2014 Declaration of completeness",
+        "url": "https://www.verpackungsregister.org/en/system-participation-data-reporting/declaration-of-completeness"
+      }
+    }
+  ],
+  "questions": [
+    {
+      "id": "product_group",
+      "label": "What product category is this?",
+      "options": [
+        "food",
+        "beverage",
+        "cosmetic",
+        "chemical",
+        "other"
+      ]
+    },
+    {
+      "id": "destination",
+      "label": "Where are you exporting?",
+      "options": [
+        "Germany",
+        "France",
+        "Netherlands",
+        "United Kingdom"
+      ]
+    },
+    {
+      "id": "packaging_material",
+      "label": "Main packaging material?",
+      "options": [
+        "plastic",
+        "paper",
+        "glass",
+        "metal",
+        "composite"
+      ]
+    },
+    {
+      "id": "food_contact",
+      "label": "Does the packaging directly contact the product?",
+      "options": [
+        "yes",
+        "no"
+      ]
+    },
+    {
+      "id": "b2c",
+      "label": "Will the packaged product reach consumers/end users in the destination market?",
+      "options": [
+        "yes",
+        "no",
+        "unknown"
+      ]
+    },
+    {
+      "id": "packaging_mass",
+      "label": "Packaging mass",
+      "options": [
+        "known",
+        "unknown"
+      ]
+    },
+    {
+      "id": "material_structure",
+      "label": "Do you know the exact material/layer structure?",
+      "options": [
+        "yes",
+        "no"
+      ]
+    }
+  ]
+}
